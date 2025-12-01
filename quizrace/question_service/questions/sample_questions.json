@@ -1,0 +1,420 @@
+[
+  {
+    "id": 1,
+    "type": "multiple-choice",
+    "category": "blockchain",
+    "text": "What is Linera's core innovation?",
+    "options": [
+      "Sharded rollups",
+      "Microchains",
+      "Zero-knowledge proofs",
+      "Side channels"
+    ],
+    "correctIndex": 1,
+    "points": 10
+  },
+  {
+    "id": 2,
+    "type": "multiple-choice",
+    "category": "blockchain",
+    "text": "In QuizRace, each match runs on:",
+    "options": [
+      "A single global chain",
+      "A microchain per player",
+      "A microchain per match",
+      "Purely off-chain infrastructure"
+    ],
+    "correctIndex": 2,
+    "points": 10
+  },
+  {
+    "id": 3,
+    "type": "physics-simulation",
+    "category": "physics",
+    "text": "A ball is dropped from a height of 20m. Calculate the velocity when it hits the ground (g = 10 m/s²). Adjust the velocity slider to the correct value.",
+    "simulation": {
+      "type": "projectile",
+      "initialHeight": 20,
+      "gravity": 10,
+      "correctVelocity": 20,
+      "tolerance": 0.5
+    },
+    "points": 20
+  },
+  {
+    "id": 4,
+    "type": "drag-drop",
+    "category": "coding",
+    "text": "Arrange the code blocks to create a function that calculates the factorial of a number:",
+    "blocks": [
+      "function factorial(n) {",
+      "  if (n <= 1) return 1;",
+      "  return n * factorial(n - 1);",
+      "}"
+    ],
+    "correctOrder": [0, 1, 2, 3],
+    "points": 15
+  },
+  {
+    "id": 5,
+    "type": "coding",
+    "category": "coding",
+    "text": "Complete the function to reverse a string:",
+    "codeTemplate": "function reverseString(str) {\n  // Your code here\n  return str;\n}",
+    "testCases": [
+      { "input": "hello", "expected": "olleh" },
+      { "input": "world", "expected": "dlrow" }
+    ],
+    "points": 25
+  },
+  {
+    "id": 6,
+    "type": "physics-simulation",
+    "category": "physics",
+    "text": "Two objects collide elastically. Object A (mass 2kg, velocity 5 m/s) hits Object B (mass 3kg, at rest). Calculate the final velocity of Object A using the simulation.",
+    "simulation": {
+      "type": "collision",
+      "massA": 2,
+      "velocityA": 5,
+      "massB": 3,
+      "velocityB": 0,
+      "correctVelocityA": 1,
+      "correctVelocityB": 4,
+      "tolerance": 0.2
+    },
+    "points": 25
+  },
+  {
+    "id": 7,
+    "type": "drag-drop",
+    "category": "coding",
+    "text": "Arrange these React hooks in the correct order of execution:",
+    "blocks": [
+      "useState",
+      "useEffect",
+      "useMemo",
+      "useCallback"
+    ],
+    "correctOrder": [0, 2, 3, 1],
+    "points": 15
+  },
+  {
+    "id": 8,
+    "type": "multiple-choice",
+    "category": "physics",
+    "text": "What is the formula for kinetic energy?",
+    "options": [
+      "E = mc²",
+      "E = ½mv²",
+      "E = mgh",
+      "E = Fd"
+    ],
+    "correctIndex": 1,
+    "points": 10
+  },
+  {
+    "id": 9,
+    "type": "coding",
+    "category": "coding",
+    "text": "Write a function to find the maximum number in an array:",
+    "codeTemplate": "function findMax(arr) {\n  // Your code here\n  return 0;\n}",
+    "testCases": [
+      { "input": [1, 5, 3, 9, 2], "expected": 9 },
+      { "input": [-1, -5, -3], "expected": -1 }
+    ],
+    "points": 20
+  },
+  {
+    "id": 10,
+    "type": "physics-simulation",
+    "category": "physics",
+    "text": "A pendulum swings with a period of 2 seconds. Adjust the length slider to match the correct length (g = 9.8 m/s²).",
+    "simulation": {
+      "type": "pendulum",
+      "period": 2,
+      "gravity": 9.8,
+      "correctLength": 0.993,
+      "tolerance": 0.05
+    },
+    "points": 20
+  },
+  {
+    "id": 11,
+    "type": "drag-drop",
+    "category": "coding",
+    "text": "Arrange the SQL query to select all active users:",
+    "blocks": [
+      "SELECT *",
+      "FROM users",
+      "WHERE active = true",
+      "ORDER BY name"
+    ],
+    "correctOrder": [0, 1, 2, 3],
+    "points": 15
+  },
+  {
+    "id": 12,
+    "type": "multiple-choice",
+    "category": "blockchain",
+    "text": "What does 'commit-reveal' scheme prevent in QuizRace?",
+    "options": [
+      "Network delays",
+      "Cheating and front-running",
+      "High gas fees",
+      "Slow transactions"
+    ],
+    "correctIndex": 1,
+    "points": 10
+  },
+  {
+    "id": 13,
+    "type": "puzzle",
+    "category": "math",
+    "text": "Solve this puzzle: If you have 8 coins and one is fake (lighter), what's the minimum number of weighings needed to find it using a balance scale?",
+    "options": [
+      "2 weighings",
+      "3 weighings",
+      "4 weighings",
+      "5 weighings"
+    ],
+    "correctIndex": 0,
+    "points": 15
+  },
+  {
+    "id": 14,
+    "type": "physics-simulation",
+    "category": "physics",
+    "text": "A car accelerates from 0 to 60 km/h in 10 seconds. Calculate the acceleration in m/s² using the simulation.",
+    "simulation": {
+      "type": "acceleration",
+      "initialVelocity": 0,
+      "finalVelocity": 16.67,
+      "time": 10,
+      "correctAcceleration": 1.667,
+      "tolerance": 0.1
+    },
+    "points": 20
+  },
+  {
+    "id": 15,
+    "type": "coding",
+    "category": "coding",
+    "text": "Write a function to check if a number is prime:",
+    "codeTemplate": "function isPrime(n) {\n  // Your code here\n  return false;\n}",
+    "testCases": [
+      { "input": 7, "expected": true },
+      { "input": 10, "expected": false },
+      { "input": 2, "expected": true }
+    ],
+    "points": 25
+  },
+  {
+    "id": 16,
+    "type": "drag-drop",
+    "category": "math",
+    "text": "Arrange these steps to solve a quadratic equation ax² + bx + c = 0:",
+    "blocks": [
+      "Calculate discriminant: b² - 4ac",
+      "If discriminant < 0, no real solutions",
+      "If discriminant = 0, one solution: -b/2a",
+      "If discriminant > 0, two solutions: (-b ± √discriminant)/2a"
+    ],
+    "correctOrder": [0, 1, 2, 3],
+    "points": 20
+  },
+  {
+    "id": 17,
+    "type": "multiple-choice",
+    "category": "math",
+    "text": "What is the value of π (pi) to 2 decimal places?",
+    "options": [
+      "3.12",
+      "3.14",
+      "3.16",
+      "3.18"
+    ],
+    "correctIndex": 1,
+    "points": 10
+  },
+  {
+    "id": 18,
+    "type": "physics-simulation",
+    "category": "physics",
+    "text": "A spring with k=100 N/m is stretched 0.5m. Calculate the potential energy stored using the simulation.",
+    "simulation": {
+      "type": "spring",
+      "springConstant": 100,
+      "displacement": 0.5,
+      "correctEnergy": 12.5,
+      "tolerance": 0.5
+    },
+    "points": 20
+  },
+  {
+    "id": 19,
+    "type": "puzzle",
+    "category": "logic",
+    "text": "You have 3 switches and 3 light bulbs in another room. You can only enter once. How do you determine which switch controls which bulb?",
+    "options": [
+      "Turn on switch 1 for 5 min, turn it off, turn on switch 2, enter room",
+      "Turn on all switches, enter room",
+      "Turn on switch 1, wait, turn on switch 2, enter room",
+      "Turn on switch 1, enter room immediately"
+    ],
+    "correctIndex": 0,
+    "points": 20
+  },
+  {
+    "id": 20,
+    "type": "coding",
+    "category": "coding",
+    "text": "Write a function to calculate the Fibonacci number at position n:",
+    "codeTemplate": "function fibonacci(n) {\n  // Your code here\n  return 0;\n}",
+    "testCases": [
+      { "input": 0, "expected": 0 },
+      { "input": 1, "expected": 1 },
+      { "input": 5, "expected": 5 },
+      { "input": 7, "expected": 13 }
+    ],
+    "points": 25
+  },
+  {
+    "id": 21,
+    "type": "drag-drop",
+    "category": "coding",
+    "text": "Arrange these steps for binary search algorithm:",
+    "blocks": [
+      "Sort the array",
+      "Set left = 0, right = array.length - 1",
+      "While left <= right, calculate mid",
+      "If target == array[mid], return mid",
+      "If target < array[mid], right = mid - 1, else left = mid + 1"
+    ],
+    "correctOrder": [0, 1, 2, 3, 4],
+    "points": 20
+  },
+  {
+    "id": 22,
+    "type": "multiple-choice",
+    "category": "blockchain",
+    "text": "What is a smart contract?",
+    "options": [
+      "A legal document",
+      "Self-executing code on blockchain",
+      "A database",
+      "A cryptocurrency"
+    ],
+    "correctIndex": 1,
+    "points": 10
+  },
+  {
+    "id": 23,
+    "type": "physics-simulation",
+    "category": "physics",
+    "text": "A projectile is launched at 45° with initial velocity 20 m/s. Calculate the maximum height using the simulation (g = 10 m/s²).",
+    "simulation": {
+      "type": "projectile-angle",
+      "angle": 45,
+      "initialVelocity": 20,
+      "gravity": 10,
+      "correctHeight": 10,
+      "tolerance": 0.5
+    },
+    "points": 25
+  },
+  {
+    "id": 24,
+    "type": "puzzle",
+    "category": "logic",
+    "text": "You're in a room with 3 doors. One leads to freedom, one to a trap, one to another room with 2 doors. How do you find freedom?",
+    "options": [
+      "Always choose the left door",
+      "Mark doors and try systematically",
+      "Choose randomly",
+      "Ask for help"
+    ],
+    "correctIndex": 1,
+    "points": 15
+  },
+  {
+    "id": 25,
+    "type": "coding",
+    "category": "coding",
+    "text": "Write a function to check if a string is a palindrome:",
+    "codeTemplate": "function isPalindrome(str) {\n  // Your code here\n  return false;\n}",
+    "testCases": [
+      { "input": "racecar", "expected": true },
+      { "input": "hello", "expected": false },
+      { "input": "madam", "expected": true }
+    ],
+    "points": 20
+  },
+  {
+    "id": 26,
+    "type": "drag-drop",
+    "category": "math",
+    "text": "Arrange these steps to calculate compound interest:",
+    "blocks": [
+      "Identify principal (P), rate (r), time (t), compounding frequency (n)",
+      "Calculate: A = P(1 + r/n)^(nt)",
+      "Subtract principal to get interest earned",
+      "Round to 2 decimal places"
+    ],
+    "correctOrder": [0, 1, 2, 3],
+    "points": 18
+  },
+  {
+    "id": 27,
+    "type": "multiple-choice",
+    "category": "physics",
+    "text": "What is the speed of light in vacuum?",
+    "options": [
+      "3 × 10⁶ m/s",
+      "3 × 10⁸ m/s",
+      "3 × 10¹⁰ m/s",
+      "3 × 10¹² m/s"
+    ],
+    "correctIndex": 1,
+    "points": 10
+  },
+  {
+    "id": 28,
+    "type": "physics-simulation",
+    "category": "physics",
+    "text": "A circuit has a 12V battery and a 4Ω resistor. Calculate the current using Ohm's law simulation.",
+    "simulation": {
+      "type": "circuit",
+      "voltage": 12,
+      "resistance": 4,
+      "correctCurrent": 3,
+      "tolerance": 0.1
+    },
+    "points": 20
+  },
+  {
+    "id": 29,
+    "type": "puzzle",
+    "category": "math",
+    "text": "A farmer has 17 sheep. All but 9 die. How many are left?",
+    "options": [
+      "8",
+      "9",
+      "17",
+      "26"
+    ],
+    "correctIndex": 1,
+    "points": 15
+  },
+  {
+    "id": 30,
+    "type": "coding",
+    "category": "coding",
+    "text": "Write a function to sort an array using bubble sort:",
+    "codeTemplate": "function bubbleSort(arr) {\n  // Your code here\n  return arr;\n}",
+    "testCases": [
+      { "input": [3, 1, 4, 2], "expected": [1, 2, 3, 4] },
+      { "input": [5, 2, 8, 1], "expected": [1, 2, 5, 8] }
+    ],
+    "points": 25
+  }
+]

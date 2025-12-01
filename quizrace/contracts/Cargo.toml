@@ -1,0 +1,17 @@
+[workspace]
+members = [
+    "match_contract",
+    "lobby_contract",
+]
+
+[workspace.package]
+edition = "2021"
+version = "0.1.0"
+authors = ["WaveHack QuizRace"]
+license = "MIT"
+
+[workspace.dependencies]
+linera-sdk = "0.15.5"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+

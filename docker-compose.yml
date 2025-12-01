@@ -1,0 +1,94 @@
+services:
+  linera-net:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: quizrace-linera
+    ports:
+      - "8080:8080"   # Faucet
+      - "9001:9001"   # Linera service
+      - "13001:13001" # Storage service
+    volumes:
+      - .:/build
+      - linera-data:/root/.local/share/linera
+    environment:
+      - RUST_BACKTRACE=1
+      - CARGO_BUILD_JOBS=2
+    command: >
+      bash -c "
+        echo 'Setting up Linera...' &&
+        rustup target add wasm32-unknown-unknown || true &&
+        cd quizrace/contracts &&
+        cargo build --release --target wasm32-unknown-unknown || echo 'Contract build skipped' &&
+        cd /build &&
+        echo 'Starting Linera network...' &&
+        linera net up --with-faucet --faucet-port 8080 &
+        sleep 10 &&
+        echo 'Starting Linera service...' &&
+        linera service --port 9001 &
+        echo 'Services started. Waiting...' &&
+        wait
+      "
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:9001/graphql || exit 0"]
+      interval: 15s
+      timeout: 10s
+      retries: 10
+      start_period: 60s
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 4G
+        reservations:
+          memory: 2G
+
+  question-service:
+    build:
+      context: .
+      dockerfile: Dockerfile.question-service
+    container_name: quizrace-question-service
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./quizrace/question_service:/app
+      - /app/node_modules
+    working_dir: /app
+    command: npm start
+    depends_on:
+      linera-net:
+        condition: service_started
+    environment:
+      - PORT=4000
+      - NODE_ENV=production
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:4000/questions || exit 0"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    container_name: quizrace-frontend
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./quizrace/frontend:/app
+      - /app/node_modules
+    working_dir: /app
+    command: npm run dev
+    depends_on:
+      question-service:
+        condition: service_started
+    environment:
+      - VITE_QUESTION_SERVICE_URL=http://localhost:4000
+      - VITE_LINERA_SERVICE_URL=http://localhost:9001
+    restart: unless-stopped
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+volumes:
+  linera-data:
